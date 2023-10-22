@@ -1,0 +1,28 @@
+.card {
+  width: 80%;
+  height: 40%;
+  background-image: linear-gradient(30deg,#2E3192, #1BFFFF);
+  margin: 5%;
+  display: inline-block;
+  text-align: center;
+  transition: transform 0.5s;
+  perspective: 1000px; /* Define the perspective for 3D space */
+  border-radius: 100px;
+  padding: 10%;
+}
+
+/* Style for the front face of the card */
+.card p {
+  transform: rotateY(0deg);
+  backface-visibility: hidden; /* Hide the back face of the element */
+  text-align: center;
+}
+
+/* Style for the back face of the card */
+.card.clicked {
+  transform: rotateY(180deg);
+}
+.card.clicked p {
+  transform: rotateY(0deg); /* Apply opposite rotation to the text */
+}
+
